@@ -1,3 +1,5 @@
+//Loading data from json file.
+
 const AWS = require("aws-sdk");
 const fs = require('fs');
 
