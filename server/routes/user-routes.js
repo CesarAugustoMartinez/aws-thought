@@ -1,3 +1,4 @@
+// creating API endpoints to access DynamoDB.
 const express = require('express');
 const router = express.Router();
 const AWS = require("aws-sdk");
