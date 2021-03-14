@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({ username: "", thought: "" });
   const [characterCount, setCharacterCount] = useState(0);
@@ -12,7 +11,6 @@ const ThoughtForm = () => {
       setCharacterCount(event.target.value.length);
     }
   };
-
   // submit form
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -34,7 +32,6 @@ const ThoughtForm = () => {
     setFormState({ username: "", thought: "" });
     setCharacterCount(0);
   };
-
   const handleImageUpload = event => {
     event.preventDefault();
     const data = new FormData();
@@ -59,7 +56,6 @@ const ThoughtForm = () => {
     };
     postImage();
   };
-
   return (
     <div>
       <p className={`m-0 ${characterCount === 280 ? "text-error" : ""}`}>
@@ -98,5 +94,4 @@ const ThoughtForm = () => {
     </div>
   );
 };
-
 export default ThoughtForm;
