@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 const ThoughtForm = () => {
-  const [formState, setFormState] = useState({ username: "", thought: "" });
+  const [formState, setFormState] = useState({ username: "", thought: "", image: "" });
   const [characterCount, setCharacterCount] = useState(0);
   const fileInput = useRef(null);
 
@@ -29,7 +29,7 @@ const ThoughtForm = () => {
     };
     postData();
     // clear form value
-    setFormState({ username: "", thought: "" });
+    setFormState({ username: "", thought: ""});
     setCharacterCount(0);
   };
   const handleImageUpload = event => {
